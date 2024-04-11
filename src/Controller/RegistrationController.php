@@ -30,6 +30,11 @@ class RegistrationController extends AbstractController
                 )
             );
 
+            $this->addFlash(
+                'success',
+                'Account is succesvol aangemaakt'
+            );
+
             $entityManager->persist($user);
             $entityManager->flush();
 
