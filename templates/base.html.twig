@@ -16,6 +16,11 @@
         {% endblock %}
     </head>
     <body>
+    <div class="row">
+        {% if app.user %}
+           {% include 'nav.html.twig' %}
+        {% endif %}
+    </div>
         {% block body %}{% endblock %}
     </body>
 </html>
